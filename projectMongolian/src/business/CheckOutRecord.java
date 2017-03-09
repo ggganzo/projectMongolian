@@ -1,4 +1,4 @@
-package main;
+package business;
 
 import java.util.Date;
 
@@ -9,6 +9,13 @@ public class CheckOutRecord {
 	private Date checkInDate;
 	private double fineAmount;
 	private Date finedDate;
+
+	private Resource resource;
+
+	public CheckOutRecord(Resource resource) {
+		this.setResource(resource);
+		this.checkOutDate = new Date();
+	}
 
 	public Date getDueDate() {
 		return this.dueDate;
@@ -68,6 +75,14 @@ public class CheckOutRecord {
 	 */
 	public void setFinedDate(Date finedDate) {
 		this.finedDate = finedDate;
+	}
+
+	public Resource getResource() {
+		return resource;
+	}
+
+	public void setResource(Resource resource) {
+		this.resource = resource;
 	}
 
 }

@@ -1,7 +1,8 @@
-package main;
+package business.person;
 
 public class Person {
 
+	private int personId;
 	private String firstName;
 	private String lastName;
 	private String bio;
@@ -12,6 +13,22 @@ public class Person {
 	private String city;
 	private String state;
 	private int zip;
+
+	public Person(int personId, String firstName, String lastName, String bio, String phone, String email, String address,
+			String street, String city, String state, int zip) {
+		
+		this.setPersonId(personId);
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.bio = bio;
+		this.phone = phone;
+		this.email = email;
+		this.address = address;
+		this.street = street;
+		this.city = city;
+		this.state = state;
+		this.zip = zip;
+	}
 
 	public String toString() {
 		// TODO - implement Person.toString
@@ -136,6 +153,14 @@ public class Person {
 	 */
 	public void setZip(int zip) {
 		this.zip = zip;
+	}
+
+	public int getPersonId() {
+		return personId;
+	}
+
+	public void setPersonId(int personId) {
+		this.personId = personId;
 	}
 
 }

@@ -1,5 +1,6 @@
 package application;
 	
+import business.person.staff.Staff;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -9,6 +10,9 @@ import javafx.scene.Scene;
 
 
 public class Login extends Application {
+	
+	public static Staff loginUser;
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {

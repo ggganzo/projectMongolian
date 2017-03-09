@@ -1,6 +1,4 @@
-package main;
-
-import java.util.Date;
+package business;
 
 public class ResourceInfo {
 
@@ -9,7 +7,16 @@ public class ResourceInfo {
 	private String author;
 	private String authorText;
 	private String description;
-	private Date maxDate;
+	private int maxDay;
+
+	public ResourceInfo(String title, String isbn, String author, String authorText, String description, int maxDay) {
+		this.title = title;
+		this.isbn = isbn;
+		this.author = author;
+		this.authorText = authorText;
+		this.description = description;
+		this.maxDay = maxDay;
+	}
 
 	public String getTitle() {
 		return this.title;
@@ -63,24 +70,12 @@ public class ResourceInfo {
 		return this.description;
 	}
 
-	/**
-	 * 
-	 * @param description
-	 */
-	public void setDescription(String description) {
-		this.description = description;
+	public int getMaxDay() {
+		return maxDay;
 	}
 
-	public Date getMaxDate() {
-		return this.maxDate;
-	}
-
-	/**
-	 * 
-	 * @param maxDate
-	 */
-	public void setMaxDate(Date maxDate) {
-		this.maxDate = maxDate;
+	public void setMaxDay(int maxDay) {
+		this.maxDay = maxDay;
 	}
 
 }

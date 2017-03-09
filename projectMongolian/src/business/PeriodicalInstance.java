@@ -1,8 +1,13 @@
-package main;
+package business;
 
 import java.util.Date;
 
 public class PeriodicalInstance extends Resource {
+
+	public PeriodicalInstance(int resourceId, int type, String isbn, Date issueDate) {
+		super(resourceId, type, isbn);
+		this.issueDate = issueDate;
+	}
 
 	private Date issueDate;
 

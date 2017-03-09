@@ -1,10 +1,19 @@
-package main;
+package business.person.staff.task;
+
+import business.CheckOutRecord;
+import business.Resource;
+import dataaccess.DataAccess;
+import dataaccess.DataAccessFacade;
 
 public class LibrarianTasks {
 
-	public void checkOut() {
-		// TODO - implement LibrarianTasks.checkOut
-		throw new UnsupportedOperationException();
+	public void checkOut(CheckOutRecord record) {
+
+		DataAccess data = DataAccessFacade.getDataAccessFacade();
+
+		data.addRecord(String.valueOf(record.getResource().getResourceId()), record);
+		
+
 	}
 
 	public void checkIn() {
